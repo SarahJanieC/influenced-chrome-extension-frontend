@@ -1,0 +1,29 @@
+{
+  "name": "influenced",
+  "version": "1.0.0",
+  "description": "Connects brands with agencies to deliver creator data for ad partnerships",
+  "main": "api.js",
+  "browser": {
+    "@lib/utils": "api.js"
+  },
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sarah janie calderon",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
+    "fs": "^0.0.1-security",
+    "os-browserify": "^0.3.0",
+    "pat": "^0.0.1",
+    "path-browserify": "^1.0.1",
+    "process-es6": "^0.11.6",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10",
+    "webpack-cli": "^5.0.1"
+  }
+}
