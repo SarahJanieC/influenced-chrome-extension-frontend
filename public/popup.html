@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Influenced</title>
+    <link rel="stylesheet" href="popup.css" />
+    <a href="https://www.flaticon.com/free-icons/search" title="search icons"></a>
+  </head>
+  <body>
+    <div id="heading">
+      <img src="/public/discussion.png" alt="Handshake Icon" id="header-icon">
+      <h1>Welcome to Influenced</h1>
+      <hr>
+      <h3>Let's get you connected to your favorite creators!</h3>
+
+    </div>
+
+    <div id="warning">
+      <h3 class="warning-text">Oops... looks like you aren't on a social media profile</h3>
+      <h3 class="warning-text">Come back when you find the creator's page!</h3>
+      <img src="/public/search.png" alt="Handshake Icon">
+    </div>
+
+    <div id="login">
+      <!-- <img src="search.png" alt="Handshake Icon"> -->
+        <div class="login-box">
+          <label for="authKey">Enter Authentication Key:</label>
+          <input id="authKey" name="authKey" placeholder="">
+
+          <div class="login-label-box">
+            <label for="brand-login">Your Brand:</label>
+          </div>
+
+          <select name="brand-login" id="brand-login" class="select">
+            <option value="" disabled selected>select brand</option>
+            <option value="Strip Makeup">Strip Makeup</option>
+            <option value="Honeylove">Honeylove</option>
+          </select>
+
+          <div class="stay-logged-grid">
+            <label for="stay-logged" class="checkbox-text">Save Credentials</label>
+            <input type="checkbox" id="stay-logged" name="stay-logged" value="" class="checkbox">   
+          </div>
+
+          <div class="submit-div">           
+            <button id="login-btn" class="button">Login</button>
+            <div id="status-login"></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="sub" class="hidden">
+        <div id="tabs">
+          <button id="brand-btn" class="tablink active" id="defaultOpen">Brand Settings</button>
+          <button id="request-btn" class="tablink">Request Intro</button>
+          <!-- <button id="influencer-btn" class="tablink">Influencers</button> -->
+        </div>
+      <div id='brand-details' class="tabcontent">
+        <div id="selection1">
+          <div class="label-box">
+              <label for="company">Partnership Company:</label>
+          </div>
+          <select name="company" id="company" class="select">
+            <option value="" disabled selected>select company</option>
+            <option value="Lumanu">Lumanu</option>
+          </select>
+        </div>
+        <div id="selection2">
+          <div class="label-box">
+              <label for="brand">Your Brand:</label>
+          </div>
+          <select name="brand" id="brand" class="select">
+            <option value="" disabled>select brand</option>
+            <option value="" id="option-brand"></option>
+          </select>
+        </div>
+        <div id="selection3">
+          <div class="label-box">
+                <label for="ugcBudget">Max Budget for UGC:</label>
+            </div>
+            <input type="$" id="ugcBudget" name="ugcBudget" placeholder="$0">
+          </div>
+        <div id="selection3">
+          <div class="label-box">
+              <label for="adBudget">Max Budget for Ad Access:</label>
+          </div>
+          <input type="$" id="adBudget" name="adBudget" placeholder="$0">
+        </div>
+        <div id="selection4">
+          <div class="label-box">
+            <label for="igBudget">Max Budget for (1) IG Reel:</label>
+          </div>
+          <input type="$" id="igBudget" name="igBudget" placeholder="$0">
+        </div>
+
+        <div class="submit-div">           
+          <button id="save" class="button">Save Settings</button>
+          <div id="status"></div>
+        </div>
+      </div>
+
+
+      <div id='request-details' class="tabcontent hidden">
+        <h3 id="interest-text"></h3>
+        <div id="request1">
+          <div class="label-box">
+              <label for="UGC">Content Request:</label>
+          </div>
+          <div class="grid">
+            <label for="UGC" class="checkbox-text">UGC:</label>
+            <input type="checkbox" id="UGC" name="UGC" value="" class="checkbox"> 
+            <label for="ad-access" class="checkbox-text">IG Reel:</label>
+            <input type="checkbox" id="ig-reel" name="ig-reel" value="" class="checkbox">  
+            <label for="ad-access" class="checkbox-text">Ad Access (30 days):</label>
+            <input type="checkbox" id="ad-access" name="ad-access" value="" class="checkbox"> 
+          </div> 
+        </div>
+        <div id="request2">
+          <div class="label-box">
+              <label for="brand">Engagement Type:</label>
+          </div>
+          <div class="grid">
+            <label for="paid-collab" class="checkbox-text">Paid Collab:</label>
+            <input type="checkbox" id="paid-collab" name="paid-collab" value="" class="checkbox"> 
+            <label for="gifting" class="checkbox-text">Gifting:</label>
+            <input type="checkbox" id="gifting" name="gifting" value="" class="checkbox">  
+            <label for="other" class="checkbox-text">Other:</label>
+            <input type="checkbox" id="other" name="other" value="" class="checkbox"> 
+            <label for="affiliate" class="checkbox-text">Affiliate/Ambassador Program:</label>
+            <input type="checkbox" id="affiliate" name="affiliate" value="" class="checkbox"> 
+          </div> 
+        </div>
+        <div id="request3">
+          <div class="label-box">
+              <label for="brand">Reason for Interest:</label>
+          </div>
+          <textarea class="reason-textarea"></textarea>
+        </div>
+
+        <div class="submit-div2">           
+          <button id="save2" class="button">Send Request</button>
+          <div id="status2"></div>
+        </div>
+      </div>
+
+      <!-- <div id='influencer-details' class="tabcontent hidden">
+        <div id='influencer-detail-sub'>
+          <ul class="list">
+            <li><h3 id="profile-column">Profile</h3></li>
+            <li><h3 id="url-column">URL</h3></li>
+            <li><h3 id="status-column">Status</h3></li>
+          </ul>
+
+        </div>
+      </div> -->
+
+    
+    </div>
+    <!-- <script src="/src/bundle.js"></script> -->
+    <script src="/src/api.js"></script>
+    <script src="/src/main.js"></script>
+    <script src="/src/utils.js"></script>
+</html>
